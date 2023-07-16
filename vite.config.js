@@ -5,6 +5,7 @@ const root = resolve(__dirname, 'src')
 const outDir = resolve(__dirname, 'dist')
 
 export default defineConfig({
+    root,
     base: process.env.GITHUB_PAGES
         ? "sample"
         : "./",
