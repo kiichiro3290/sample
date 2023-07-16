@@ -7,6 +7,21 @@ export default defineConfig({
     base: process.env.GITHUB_PAGES
         ? "sample"
         : "./",  
+    outDir: 'dist',
     root,
+    build: {
+        outDir,
+        rollupOptions: {
+            input: {
+                index: resolve(root, 'index.html'),
+                threejs: resolve(root, 'threejs', 'index.html'),
+            }
+        }
+    },
+    resolve: {
+        alias: {
+            '@': root
+        }
+    }
 })
 
