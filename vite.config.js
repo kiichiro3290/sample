@@ -7,9 +7,8 @@ const outDir = resolve(__dirname, 'dist')
 export default defineConfig({
     base: process.env.GITHUB_PAGES
         ? "sample"
-        : "/",
+        : "./",
     outDir: 'dist',
-    root,
     build: {
         outDir,
         rollupOptions: {
