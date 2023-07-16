@@ -34,7 +34,6 @@ canvas {
     color: blue;
 }
 
-// ページ遷移後のリンクの色の指定
 #link :visited {
     color: blue;
 }
