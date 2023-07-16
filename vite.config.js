@@ -2,10 +2,10 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 
 const root = resolve(__dirname, 'src')
-const outDir = resolve(__dirname, 'dist')
+const outDir = resolve(__dirname, 'src/dist')
 
 export default defineConfig({
-    base: '/',
+    base: '/sample/',
     root,
     build: {
         outDir,
@@ -14,6 +14,11 @@ export default defineConfig({
                 index: resolve(root, 'index.html'),
                 threejs: resolve(root, 'threejs', 'index.html'),
             }
+        }
+    },
+    resolve: {
+        alias: {
+            '@': root
         }
     }
 })
