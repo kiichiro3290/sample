@@ -8,10 +8,5 @@ export default defineConfig({
         ? "sample"
         : "./",  
     root,
-    resolve: {
-        alias: {
-            '@': root
-        }
-    }
 })
 
