@@ -25,14 +25,16 @@ canvas {
     padding: 10px;
     box-sizing: border-box;
     text-align: center;
-
-    // テキストにカーソルを合わさせない
-    /* -moz-user-select: none; */
-    /* -webkit-user-select: none; */
-    /* -ms-user-select: none; */
-    /* user-select: none; */
-    pointer-events: none;
-    
     z-index: 1;
     color: white;
+    font-size: 2rem;
+}
+
+#link {
+    color: blue;
+}
+
+// ページ遷移後のリンクの色の指定
+#link :visited {
+    color: blue;
 }
