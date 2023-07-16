@@ -26,7 +26,8 @@ const cube = new THREE.Mesh(geometry, material);
 
 // モデルの追加
 const loader = new GLTFLoader()
-loader.load('/sample/dog.glb', gltf => {
+const url = import.meta.env.MODE === 'development' ? '' : 'sample/'
+loader.load(`/${url}dog.glb`, gltf => {
     const model = gltf.scene;
     model.scale.set(4,4,4);
     model.position.set(10, -10, -60);
